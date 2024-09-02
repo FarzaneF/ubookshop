@@ -79,7 +79,7 @@ export default async (context): Promise<SSRSession> => {
   return {
     uid: "userid",
     name: "armin",
-    image: "https://irmapserver.ir/qepal/user.svg",
+    image: "https://cdn.turing.team/qepal/user.svg",
     imageprop:null,
     lang: "fa",
     cchar: "IR",

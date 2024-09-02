@@ -40,8 +40,8 @@ export const Block = props => {
         <f-csb style={{ width: "100%", padding: "5px 0" }}>
 
             <img src={props.state.cart.includes(props.book.title)?
-            "https://irmapserver.ir/qepal/ok.svg":
-            "https://irmapserver.ir/qepal/cart.svg"}
+            "https://cdn.turing.team/qepal/ok.svg":
+            "https://cdn.turing.team/qepal/cart.svg"}
 
             style={{height:size, width:size, objectFit:"contain",
                 margin:"0 10px"

@@ -24,6 +24,14 @@ const Page: PageEl = (props, state:
     cart: Array<string>
   }, refresh, getProps) => {
 
+    getProps(async ()=>{
+      let cart = localStorage.getItem("cart")
+      if (cart)
+      {
+        state.cart = JSON.parse(cart)
+      }
+    })
+
   let styles = global.styles
 
   let total_price = 0
@@ -89,11 +97,13 @@ const Page: PageEl = (props, state:
 
             if (state.cart.includes(state.book.title)) {
               state.cart = state.cart.filter(bookname => state.book.title != bookname)
+              localStorage.setItem("cart", JSON.stringify(state.cart))
               state.form = null
               refresh()
             }
             else {
               state.cart.push(state.book.title)
+              localStorage.setItem("cart", JSON.stringify(state.cart))
               state.form = null
               refresh()
             }
@@ -147,7 +157,7 @@ export async function getServerSideProps(context) {
   let books = await global.db.collection("books").find({}).toArray()
 
   for (let book of books) {
-    book.imageLink = "https://irmapserver.ir/research/ex/books/" + book.imageLink
+    book.imageLink = "https://cdn.turing.team/research/ex/books/" + book.imageLink
   }
 
   console.log(books)
