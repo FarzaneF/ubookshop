@@ -21,7 +21,7 @@ You can start editing the page by modifying `app/page.tsx`. The page auto-update
 <br/>
 <br/>
 
-<img src="<img src="https://github.com/FarzaneF/ubookshop/blob/main/pic3.jpg"/>
+<img src="<img src="https://github.com/FarzaneF/ubookshop/blob/main/pic1.png"/>
 
 This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
 
