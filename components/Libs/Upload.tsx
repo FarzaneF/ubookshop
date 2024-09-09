@@ -98,7 +98,7 @@ export default (props: {
           name: f.name.toLowerCase(),
           size: f.size,
           percent: 0,
-          url: `https://cdn.turing.team/qeupload/${global.user.uid}/${f.name.toLowerCase()}`
+          url: `https://cdn.ituring.ir/qeupload/${global.user.uid}/${f.name.toLowerCase()}`
         })
       }
     }
@@ -119,7 +119,7 @@ export default (props: {
 
         axios.request({
           method: "post",
-          url: "https://cdn.turing.team/qeupload/upload.php",
+          url: "https://cdn.ituring.ir/qeupload/upload.php",
           headers: {
             // token: ans.token
           },

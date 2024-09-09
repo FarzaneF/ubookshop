@@ -117,7 +117,7 @@ const Page: PageEl = (props, state:
 
       <Window title="سبد خرید" style={{ margin: 10, width: "calc(100% - 20px)" }} >
         <f-cse style={{
-          height: 60, width: "100%"
+          height: 60, width: "100%" , backgroundColor:"white"
         }}>
           <f-14>مجموع قابل پرداخت: {total_price.toLocaleString("fa-IR")} تومان</f-14>
           <f-14>تعداد کتاب ها {state.cart.length.toLocaleString("fa-IR")} عدد</f-14>
@@ -157,7 +157,7 @@ export async function getServerSideProps(context) {
   let books = await global.db.collection("books").find({}).toArray()
 
   for (let book of books) {
-    book.imageLink = "https://cdn.turing.team/research/ex/books/" + book.imageLink
+    book.imageLink = "https://cdn.ituring.ir/research/ex/books/" + book.imageLink
   }
 
   console.log(books)
